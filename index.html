@@ -1,15 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sobre Nós - Igreja ICF</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
-        <h1>O gui é gay</h1>
+    <div class="page-wrapper">
+        <header class="topbar">
+            <div class="logo-container">
+                <div class="logo">✝</div>
+                <span>ICF</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav class="menu" id="menu">
+                <a href="#sobre">Sobre Nós</a>
+                <a href="#missao">Missão</a>
+                <a href="#valores">Valores</a>
+            </nav>
+        </header>
+
+        <main class="content">
+            <section class="hero">
+                <div class="hero-text">
+                    <p class="subtitle">Bem-vindo à nossa casa</p>
+                    <h1>SOBRE NÓS</h1>
+                    <p class="hero-description">Somos uma comunidade de fé, amor e comunhão, onde todos são acolhidos.</p>
+                    <div class="scroll-indicator">↓</div>
+                </div>
+            </section>
+
+            <section id="sobre" class="card about-card">
+                <h2>Conheça nossa igreja</h2>
+                <p>Amar a Deus sobre todas as coisas e ao próximo como a nós mesmos. Compartilhar o amor e a esperança de Jesus Cristo com nossa comunidade, vivendo a fé de forma autêntica e inclusiva.</p>
+                <div class="progress-bar"></div>
+            </section>
+
+            <section id="missao" class="card mission-card">
+                <h2>Nossa Missão</h2>
+                <p>Amar a Deus sobre todas as coisas e ao próximo como a nós mesmos. Compartilhar o amor e a esperança de Jesus Cristo com nossa comunidade.</p>
+                <div class="pulse-dot"></div>
+            </section>
+
+            <section id="valores" class="card values-card">
+                <h2>Principais Valores</h2>
+                <div class="values-grid">
+                    <article class="value-item">
+                        <img class="value-image" src="https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=700&q=80" alt="Bíblia aberta representando a fé">
+                        <span class="icon">✝️</span>
+                        <h3>1. Fé</h3>
+                        <p>Centrada na Palavra de Deus.</p>
+                    </article>
+                    <article class="value-item">
+                        <img class="value-image" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=700&q=80" alt="Pessoas reunidas representando comunidade">
+                        <span class="icon">👥</span>
+                        <h3>2. Comunidade</h3>
+                        <p>Vivência em união e suporte mútuo.</p>
+                    </article>
+                    <article class="value-item">
+                        <img class="value-image" src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=700&q=80" alt="Mãos em gesto de cuidado representando amor">
+                        <span class="icon">❤️</span>
+                        <h3>3. Amor</h3>
+                        <p>Prática do acolhimento e do serviço ao próximo.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="card photo-card">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80" alt="Foto da igreja" />
+                </div>
+                <p>Essa é a imagem de referência para a nossa igreja; troque pela foto real do templo quando desejar.</p>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <p>Seja bem-vindo! Venha nos visitar e fazer parte desta família.</p>
+            <p class="footer-date" id="year"></p>
+        </footer>
     </div>
+    <script src="scripts.js"></script>
 </body>
- <script src="script.js"></script>
 </html>

@@ -1,0 +1,104 @@
+.inicio {
+    min-height: calc(100vh - 190px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(64px, 8vw, 104px) 32px;
+}
+
+.logo-inicio {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto 26px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(244, 165, 28, 0.5);
+    box-shadow: 0 14px 32px rgba(63, 127, 63, 0.16);
+    animation: aparecer 0.8s ease-out 0.15s both;
+}
+
+.inicio h1 {
+    line-height: 1.08;
+}
+
+.inicio h1 em {
+    color: var(--brand-green-light);
+    font-style: normal;
+}
+
+.inicio .descricao {
+    font-size: 1.08rem;
+}
+
+.versiculo {
+    max-width: 680px;
+    margin: 30px auto 0;
+    padding: 20px 22px;
+    background: rgba(255, 255, 255, 0.72);
+    border-left: 4px solid var(--brand-amber);
+    border-radius: 14px;
+    color: var(--text-muted);
+    font-size: 1rem;
+    text-align: left;
+    box-shadow: 0 8px 24px rgba(63, 127, 63, 0.09);
+    animation: subir 0.8s ease-out 0.5s both;
+}
+
+.versiculo cite {
+    display: block;
+    margin-top: 8px;
+    color: var(--brand-green-light);
+    font-size: 0.82rem;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.botoes-inicio {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    animation: subir 0.8s ease-out 0.6s both;
+}
+
+.botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: 0.86rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.botao.principal {
+    background: var(--brand-green);
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(63, 127, 63, 0.22);
+}
+
+.botao.principal:hover {
+    background: var(--brand-green-light);
+    transform: translateY(-2px);
+}
+
+.botao.secundario {
+    background: #ffffff;
+    color: var(--brand-green);
+    border: 1px solid var(--border-soft);
+}
+
+.botao.secundario:hover {
+    color: var(--brand-amber);
+    border-color: rgba(244, 165, 28, 0.55);
+    transform: translateY(-2px);
+}

@@ -9,43 +9,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <div class="page-wrapper">
-        <header class="topbar">
-            <div class="logo-container">
+    <div class="pagina">
+        <header class="topo">
+            <div class="area-logo">
                 <img class="logo" src="img/logo.jpg" alt="Logo ICF">
                 <span>ICF</span>
             </div>
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+            <button class="botao-menu" id="botao-menu" aria-label="Abrir menu">☰</button>
             <nav class="menu" id="menu">
-                <a href="index.html#sobre">Sobre Nós</a>
+                <a href="home.html">Início</a>
+                <a href="sobreNos.html">Sobre Nós</a>
                 <a href="contatos.html">Contato</a>
             </nav>
         </header>
 
-        <main class="content">
-            <section class="hero contact-hero">
-                <div class="hero-text">
-                    <p class="subtitle">Fale com a nossa família</p>
+        <main class="conteudo">
+            <section class="capa capa-contato">
+                <div class="texto-capa">
+                    <p class="subtitulo">Fale com a nossa família</p>
                     <h1>CONTATO</h1>
-                    <p class="hero-description">Estamos em Votuporanga e será uma alegria receber você em um dos nossos encontros.</p>
-                    <div class="scroll-indicator">↓</div>
+                    <p class="descricao">Estamos em Votuporanga e será uma alegria receber você em um dos nossos encontros.</p>
+                    <div class="seta">↓</div>
                 </div>
             </section>
 
-            <section class="card contact-card">
-                <div class="contact-heading">
-                    <img src="img/logo.jpg" alt="Logo ICF Votuporanga" class="contact-logo">
+            <section class="cartao contato">
+                <div class="cabecalho-contato">
+                    <img src="img/logo.jpg" alt="Logo ICF Votuporanga" class="logo-contato">
                     <div>
-                        <p class="eyebrow">ICF Votuporanga</p>
+                        <p class="chamada">ICF Votuporanga</p>
                         <h2>Formando Jesus em nós!</h2>
                     </div>
                 </div>
                 <p>Use os canais abaixo para acompanhar a igreja, assistir aos cultos e encontrar nosso endereço.</p>
-                <div class="progress-bar"></div>
+                <div class="barra"></div>
             </section>
 
-            <section class="contact-grid">
-                <article class="card contact-info-card">
+            <section class="grade-contato">
+                <article class="cartao info-contato">
                     <i class="fa-solid fa-location-dot"></i>
                     <div>
                         <h2>Onde Estamos</h2>
@@ -53,7 +54,7 @@
                     </div>
                 </article>
 
-                <a class="card contact-link-card" href="https://www.instagram.com/familiavotuporanga/" target="_blank" rel="noopener">
+                <a class="cartao link-contato" href="https://www.instagram.com/familiavotuporanga/" target="_blank" rel="noopener">
                     <i class="fa-brands fa-instagram"></i>
                     <div>
                         <h2>Instagram</h2>
@@ -61,7 +62,7 @@
                     </div>
                 </a>
 
-                <a class="card contact-link-card" href="https://www.youtube.com/@cristafamiliavotuporanga" target="_blank" rel="noopener">
+                <a class="cartao link-contato" href="https://www.youtube.com/@cristafamiliavotuporanga" target="_blank" rel="noopener">
                     <i class="fa-brands fa-youtube"></i>
                     <div>
                         <h2>YouTube</h2>
@@ -71,9 +72,9 @@
             </section>
         </main>
 
-        <footer class="footer">
+        <footer class="rodape">
             <p>Seja bem-vindo! Venha nos visitar e fazer parte desta família.</p>
-            <p class="footer-date" id="year"></p>
+            <p class="ano-rodape" id="ano"></p>
         </footer>
     </div>
     <script src="scripts.js"></script>

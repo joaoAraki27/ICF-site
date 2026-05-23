@@ -1,60 +1,60 @@
 // Menu mobile
-const menuToggle = document.getElementById('menuToggle');
+const botaoMenu = document.getElementById('botao-menu');
 const menu = document.getElementById('menu');
 
-if (menuToggle && menu) {
-    menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('active');
+if (botaoMenu && menu) {
+    botaoMenu.addEventListener('click', () => {
+        menu.classList.toggle('aberto');
     });
 
-    document.querySelectorAll('.menu a').forEach((link) => {
-        link.addEventListener('click', () => {
-            menu.classList.remove('active');
+    document.querySelectorAll('.menu a').forEach((itemMenu) => {
+        itemMenu.addEventListener('click', () => {
+            menu.classList.remove('aberto');
         });
     });
 }
 
 // Ano no rodape
-const yearElement = document.getElementById('year');
-if (yearElement) {
-    yearElement.textContent = `© ${new Date().getFullYear()} Igreja ICF. Todos os direitos reservados.`;
+const anoRodape = document.getElementById('ano');
+if (anoRodape) {
+    anoRodape.textContent = `© ${new Date().getFullYear()} Igreja ICF. Todos os direitos reservados.`;
 }
 
 // Scroll do indicador
-const scrollIndicator = document.querySelector('.scroll-indicator');
-const firstCard = document.querySelector('.card');
+const seta = document.querySelector('.seta');
+const primeiroCartao = document.querySelector('.cartao');
 
-if (scrollIndicator && firstCard) {
-    scrollIndicator.addEventListener('click', () => {
-        firstCard.scrollIntoView({ behavior: 'smooth' });
+if (seta && primeiroCartao) {
+    seta.addEventListener('click', () => {
+        primeiroCartao.scrollIntoView({ behavior: 'smooth' });
     });
 }
 
-// Animacao dos cards ao aparecerem na tela
-const observerOptions = {
+// Animacao dos cartoes ao aparecerem na tela
+const opcoesObservador = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
 };
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+const observador = new IntersectionObserver((itens) => {
+    itens.forEach((item) => {
+        if (item.isIntersecting) {
+            item.target.style.opacity = '1';
+            item.target.style.transform = 'translateY(0)';
         }
     });
-}, observerOptions);
+}, opcoesObservador);
 
-document.querySelectorAll('.card').forEach((card) => {
-    observer.observe(card);
+document.querySelectorAll('.cartao').forEach((cartao) => {
+    observador.observe(cartao);
 });
 
-document.querySelectorAll('.value-item').forEach((item) => {
-    item.addEventListener('mouseenter', function() {
+document.querySelectorAll('.item-valor').forEach((valor) => {
+    valor.addEventListener('mouseenter', function() {
         this.style.zIndex = '10';
     });
 
-    item.addEventListener('mouseleave', function() {
+    valor.addEventListener('mouseleave', function() {
         this.style.zIndex = '1';
     });
 });

@@ -23,10 +23,10 @@ body {
     margin: 0;
     padding: 0;
     background: radial-gradient(circle at top, rgba(116, 164, 90, 0.2), transparent 36%), #f7faf4;
-    animation: fadeInBody 0.8s ease-out;
+    animation: aparecerCorpo 0.8s ease-out;
 }
 
-@keyframes fadeInBody {
+@keyframes aparecerCorpo {
     from {
         opacity: 0;
     }
@@ -35,7 +35,7 @@ body {
     }
 }
 
-@keyframes slideUp {
+@keyframes subir {
     from {
         opacity: 0;
         transform: translateY(30px);
@@ -46,7 +46,7 @@ body {
     }
 }
 
-@keyframes fadeIn {
+@keyframes aparecer {
     from {
         opacity: 0;
     }
@@ -55,7 +55,7 @@ body {
     }
 }
 
-@keyframes bounce {
+@keyframes pular {
     0%, 100% {
         transform: translateY(0);
     }
@@ -64,7 +64,7 @@ body {
     }
 }
 
-@keyframes pulse {
+@keyframes piscar {
     0%, 100% {
         opacity: 1;
     }
@@ -73,7 +73,7 @@ body {
     }
 }
 
-@keyframes growWidth {
+@keyframes crescerLargura {
     from {
         width: 0;
     }
@@ -82,13 +82,13 @@ body {
     }
 }
 
-.page-wrapper {
+.pagina {
     max-width: 1100px;
     margin: 0 auto;
     padding: 24px;
 }
 
-.topbar {
+.topo {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -98,20 +98,20 @@ body {
     border: 1px solid var(--border-soft);
     border-radius: 10px;
     box-shadow: 0 8px 28px rgba(63, 127, 63, 0.12);
-    animation: slideUp 0.6s ease-out;
+    animation: subir 0.6s ease-out;
     position: sticky;
     top: 0;
     z-index: 100;
     backdrop-filter: blur(12px);
 }
 
-.logo-container {
+.area-logo {
     display: flex;
     align-items: center;
     gap: 8px;
     font-weight: 700;
     letter-spacing: 0.2em;
-    animation: fadeIn 0.8s ease-out;
+    animation: aparecer 0.8s ease-out;
 }
 
 .logo {
@@ -157,7 +157,7 @@ body {
     width: 100%;
 }
 
-.menu-toggle {
+.botao-menu {
     display: none;
     background: none;
     border: none;
@@ -168,234 +168,123 @@ body {
     transition: transform 0.3s ease;
 }
 
-.menu-toggle:hover {
+.botao-menu:hover {
     transform: scale(1.2);
 }
 
-.content {
+.conteudo {
     display: grid;
     gap: 28px;
     margin-top: 28px;
 }
 
-.hero {
+.capa {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(238, 246, 234, 0.98));
     border-radius: 18px;
     padding: 60px 32px;
     text-align: center;
     box-shadow: 0 14px 36px rgba(63, 127, 63, 0.14);
-    animation: slideUp 0.8s ease-out 0.1s both;
+    animation: subir 0.8s ease-out 0.1s both;
     position: relative;
     overflow: hidden;
 }
 
-.hero::before {
+.capa::before {
     display: none;
 }
 
-.hero-text {
+.texto-capa {
     position: relative;
     z-index: 1;
 }
 
-.hero .subtitle {
+.capa .subtitulo {
     margin: 0 0 12px;
     font-size: 0.95rem;
     color: var(--text-muted);
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    animation: fadeIn 0.8s ease-out 0.2s both;
+    animation: aparecer 0.8s ease-out 0.2s both;
 }
 
-.hero h1 {
+.capa h1 {
     margin: 0;
     font-size: clamp(2.4rem, 3vw, 4rem);
     letter-spacing: 0.02em;
-    animation: slideUp 0.8s ease-out 0.3s both;
+    animation: subir 0.8s ease-out 0.3s both;
     color: #1f2a1f;
 }
 
-.hero-description {
+.descricao {
     max-width: 700px;
     margin: 18px auto 0;
     color: var(--text-muted);
-    animation: slideUp 0.8s ease-out 0.4s both;
+    animation: subir 0.8s ease-out 0.4s both;
 }
 
-.scroll-indicator {
+.seta {
     margin-top: 24px;
     font-size: 1.8rem;
-    animation: bounce 2s infinite;
+    animation: pular 2s infinite;
     cursor: pointer;
 }
 
-.card {
+.cartao {
     background: var(--surface);
     border-radius: 18px;
     padding: 32px;
     box-shadow: 0 10px 30px rgba(63, 127, 63, 0.12);
-    animation: slideUp 0.8s ease-out;
+    animation: subir 0.8s ease-out;
     transition: all 0.3s ease;
     border: 1px solid var(--border-soft);
 }
 
-.card:hover {
+.cartao:hover {
     box-shadow: 0 14px 36px rgba(63, 127, 63, 0.18);
     transform: translateY(-2px);
 }
 
-.card h2 {
+.cartao h2 {
     margin-top: 0;
     font-size: 1.8rem;
     color: var(--brand-green-light);
-    animation: slideUp 0.8s ease-out 0.1s both;
+    animation: subir 0.8s ease-out 0.1s both;
 }
 
-.card p {
+.cartao p {
     margin: 16px 0 0;
     color: var(--text-muted);
-    animation: slideUp 0.8s ease-out 0.2s both;
+    animation: subir 0.8s ease-out 0.2s both;
 }
 
-.progress-bar {
+.barra {
     height: 3px;
     background: linear-gradient(90deg, var(--brand-green) 0%, var(--brand-amber) 100%);
     border-radius: 2px;
     margin-top: 16px;
-    animation: slideUp 0.8s ease-out 0.3s both, growWidth 1.5s ease-out 0.6s forwards;
+    animation: subir 0.8s ease-out 0.3s both, crescerLargura 1.5s ease-out 0.6s forwards;
 }
 
-.pulse-dot {
-    width: 12px;
-    height: 12px;
-    background: var(--brand-amber);
-    border-radius: 50%;
-    margin-top: 16px;
-    animation: pulse 2s infinite;
-}
-
-.values-card .values-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-    margin-top: 22px;
-}
-
-.value-item {
-    background: var(--surface-soft);
-    border-radius: 16px;
-    padding: 18px;
-    text-align: center;
-    min-height: 200px;
-    transition: all 0.3s ease;
-    animation: slideUp 0.8s ease-out;
-    border: 1px solid var(--border-soft);
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-}
-
-.value-item:nth-child(1) {
-    animation-delay: 0.2s;
-}
-
-.value-item:nth-child(2) {
-    animation-delay: 0.3s;
-}
-
-.value-item:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-.value-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 28px rgba(63, 127, 63, 0.18);
-    background: #f5fbf0;
-}
-
-.value-image {
-    order: -1;
-    width: 100%;
-    height: 140px;
-    display: block;
-    margin-bottom: 18px;
-    border-radius: 16px;
-    object-fit: cover;
-    box-shadow: 0 8px 22px rgba(63, 127, 63, 0.12);
-    transition: transform 0.4s ease;
-}
-
-.value-item:hover .value-image {
-    transform: scale(1.04);
-}
-
-.value-item .icon {
-    display: inline-flex;
-    width: 60px;
-    height: 60px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 14px;
-    font-size: 1.8rem;
-    border-radius: 50%;
-    background: #ffffff;
-    box-shadow: 0 4px 14px rgba(63, 127, 63, 0.12);
-    transition: transform 0.3s ease;
-}
-
-.value-item:hover .icon {
-    transform: scale(1.15) rotate(10deg);
-}
-
-.value-item h3 {
-    margin: 0 0 10px;
-    font-size: 1.1rem;
-    color: var(--brand-green-light);
-}
-
-.image-wrapper {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: inset 0 0 0 1px rgba(244, 165, 28, 0.2);
-    animation: slideUp 0.8s ease-out 0.1s both;
-}
-
-.image-wrapper img {
-    width: 100%;
-    display: block;
-    border-radius: 20px;
-    object-fit: cover;
-    max-height: 520px;
-    transition: transform 0.4s ease;
-}
-
-.image-wrapper:hover img {
-    transform: scale(1.05);
-}
-
-.footer {
+.rodape {
     text-align: center;
     margin: 20px auto 0;
     padding: 24px 0;
     color: var(--text-muted);
-    animation: slideUp 0.8s ease-out 0.6s both;
+    animation: subir 0.8s ease-out 0.6s both;
 }
 
-.footer-date {
+.ano-rodape {
     font-size: 0.9rem;
     color: #6d766b;
     margin: 8px 0 0;
 }
 
 @media (max-width: 820px) {
-    .topbar {
+    .topo {
         gap: 16px;
     }
 
-    .menu-toggle {
+    .botao-menu {
         display: block;
     }
 
@@ -412,37 +301,27 @@ body {
         border-radius: 0 0 12px 12px;
         width: 100%;
         border: 1px solid var(--border-soft);
-        animation: slideUp 0.3s ease-out;
+        animation: subir 0.3s ease-out;
     }
 
-    .menu.active {
+    .menu.aberto {
         display: flex;
     }
 
-    .values-card .values-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media (max-width: 560px) {
-    .page-wrapper {
+    .pagina {
         padding: 12px;
     }
 
-    .hero,
-    .card {
+    .capa,
+    .cartao {
         padding: 20px;
     }
 
-    .hero {
+    .capa {
         padding: 40px 20px;
     }
 
-    .values-card .values-grid {
-        gap: 12px;
-    }
-
-    .value-item {
-        padding: 16px;
-    }
 }

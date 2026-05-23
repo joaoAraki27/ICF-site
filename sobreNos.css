@@ -1,0 +1,126 @@
+.ponto {
+    width: 12px;
+    height: 12px;
+    background: var(--brand-amber);
+    border-radius: 50%;
+    margin-top: 16px;
+    animation: piscar 2s infinite;
+}
+
+.valores .grade-valores {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.item-valor {
+    background: var(--surface-soft);
+    border-radius: 16px;
+    padding: 18px;
+    text-align: center;
+    min-height: 200px;
+    transition: all 0.3s ease;
+    animation: subir 0.8s ease-out;
+    border: 1px solid var(--border-soft);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.item-valor:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.item-valor:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.item-valor:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.item-valor:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(63, 127, 63, 0.18);
+    background: #f5fbf0;
+}
+
+.imagem-valor {
+    order: -1;
+    width: 100%;
+    height: 140px;
+    display: block;
+    margin-bottom: 18px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 8px 22px rgba(63, 127, 63, 0.12);
+    transition: transform 0.4s ease;
+}
+
+.item-valor:hover .imagem-valor {
+    transform: scale(1.04);
+}
+
+.item-valor .icon {
+    display: inline-flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 14px;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(63, 127, 63, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.item-valor:hover .icon {
+    transform: scale(1.15) rotate(10deg);
+}
+
+.item-valor h3 {
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+    color: var(--brand-green-light);
+}
+
+.caixa-imagem {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(244, 165, 28, 0.2);
+    animation: subir 0.8s ease-out 0.1s both;
+}
+
+.caixa-imagem img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+    object-fit: cover;
+    max-height: 520px;
+    transition: transform 0.4s ease;
+}
+
+.caixa-imagem:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 820px) {
+    .valores .grade-valores {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .valores .grade-valores {
+        gap: 12px;
+    }
+
+    .item-valor {
+        padding: 16px;
+    }
+}
